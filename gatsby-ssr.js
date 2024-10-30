@@ -44,7 +44,9 @@ exports.onRenderBody = function(_ref, options) {
     _react2.default.createElement('link', {
       key: 'fonts',
       href: link,
-      rel: 'stylesheet',
+      rel: 'preload',
+      as: 'style',
+      onload: "this.onload=null;this.rel='stylesheet'",
       crossOrigin: 'anonymous'
     })
   ])
